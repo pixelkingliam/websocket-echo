@@ -1,0 +1,9 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <ItemGroup>
+      <Compile Include="SRCS/server.cs"/>
+      <Reference Include="websocket-sharp.dll"/>
+    </ItemGroup>
+    <Target Name="Build">
+      <Csc References="@(Reference)" Sources="@(Compile)" OutputAssembly="server.exe"/>  
+    </Target>
+  </Project>
